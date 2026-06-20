@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Order Verification — Nana’s Akara</title>
+    <meta name="description" content="Verify your Nana’s Akara order payment." />
+    <meta name="theme-color" content="#0F766E" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Poppins:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="page">
+      <header class="site-header" role="banner">
+        <div class="container header-inner">
+          <a class="brand" href="index.html" aria-label="Nana's Akara home">
+            <span class="brand-mark">Nana’s Akara</span>
+            <span class="brand-sub">Online Kitchen</span>
+          </a>
+
+          <nav class="nav" aria-label="Primary navigation">
+            <a href="index.html" data-nav-link>Home</a>
+            <a href="menu.html" data-nav-link>Menu</a>
+            <a href="careers.html" data-nav-link>Careers</a>
+            <a href="contact.html" data-nav-link>Contact</a>
+            <a href="cart.html" data-nav-link>Cart</a>
+          </nav>
+
+          <div class="header-actions">
+            <a class="cart-link" href="cart.html" aria-label="Open cart">
+              <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
+              <span class="cart-count" data-cart-count hidden>0</span>
+            </a>
+            <a class="btn btn-primary btn-sm" href="menu.html">Order Now</a>
+            <button
+              class="icon-btn nav-toggle"
+              type="button"
+              aria-label="Open menu"
+              aria-expanded="false"
+              data-nav-toggle
+            >
+              <span class="nav-toggle-lines" aria-hidden="true"></span>
+            </button>
+          </div>
+        </div>
+
+        <div class="mobile-nav" data-mobile-nav hidden>
+          <div class="container">
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="careers.html">Careers</a>
+            <a href="contact.html">Contact</a>
+            <a href="cart.html">Cart</a>
+          </div>
+        </div>
+      </header>
+
+      <main id="main" role="main">
+        <section class="section tight">
+          <div class="container">
+            <div class="eyebrow">
+              <i class="fa-solid fa-shield" aria-hidden="true"></i>
+              Payment verification
+            </div>
+            <h1 style="margin-top:14px; font-size:clamp(34px,4vw,48px);">Order Status</h1>
+            <p class="lead" style="margin-top:10px;">
+              We’re confirming your payment and updating your order.
+            </p>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="container" style="max-width:840px;">
+            <div class="card">
+              <div class="card-body" style="display:grid; gap:12px;">
+                <div class="footer-title" style="margin:0;" data-verify-status>Verifying…</div>
+                <div class="muted" data-verify-details>Please keep this page open.</div>
+                <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:8px;">
+                  <a class="btn btn-primary btn-sm" href="menu.html">Back to Menu</a>
+                  <a class="btn btn-secondary btn-sm" href="contact.html">Need Help?</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer" role="contentinfo">
+        <div class="container">
+          <div class="footer-grid">
+            <div>
+              <div class="brand-mark">Nana’s Akara</div>
+              <div class="muted" style="margin-top:10px;">
+                Premium Nigerian flavours, prepared fresh and delivered to your doorstep.
+              </div>
+            </div>
+            <div>
+              <div class="footer-title">Quick Links</div>
+              <div class="footer-links">
+                <a href="menu.html">Menu</a>
+                <a href="cart.html">Cart</a>
+                <a href="careers.html">Careers</a>
+                <a href="contact.html">Contact</a>
+              </div>
+            </div>
+            <div>
+              <div class="footer-title">Customer Support</div>
+              <div class="footer-links">
+                <a href="contact.html">Help & Support</a>
+                <a href="contact.html#faq">FAQs</a>
+                <a href="checkout.html">Payments</a>
+              </div>
+            </div>
+            <div>
+              <div class="footer-title">Newsletter</div>
+              <div class="muted" style="margin-bottom:10px;">
+                Get offers and updates.
+              </div>
+              <form data-newsletter-form aria-label="Footer newsletter signup">
+                <div class="field">
+                  <label class="sr-only" for="footerNewsletterEmail">Email</label>
+                  <input
+                    class="input"
+                    id="footerNewsletterEmail"
+                    type="email"
+                    name="email"
+                    placeholder="you@example.com"
+                    autocomplete="email"
+                    required
+                  />
+                </div>
+                <button class="btn btn-primary btn-sm" type="submit" style="margin-top:10px;">
+                  Subscribe
+                </button>
+              </form>
+              <div style="margin-top:14px; display:flex; gap:12px; align-items:center;">
+                <a class="icon-btn" href="#" aria-label="Instagram">
+                  <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                </a>
+                <a class="icon-btn" href="#" aria-label="X">
+                  <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+                </a>
+                <a class="icon-btn" href="#" aria-label="Facebook">
+                  <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <div>© <span data-year></span> Nana’s Akara. All rights reserved.</div>
+            <div>Built for fast, secure online ordering.</div>
+          </div>
+        </div>
+      </footer>
+
+      <div class="toast" data-toast role="status" aria-live="polite"></div>
+    </div>
+
+    <script src="js/runtime-config.js"></script>
+    <script type="module" src="js/main.js"></script>
+    <script type="module" src="js/order-verify.js"></script>
+  </body>
+</html>
+

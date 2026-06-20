@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: nanas-akara-backend
+    env: node
+    plan: starter
+    buildCommand: npm ci
+    startCommand: node server.js
+    healthCheckPath: /api/status
+    autoDeploy: true

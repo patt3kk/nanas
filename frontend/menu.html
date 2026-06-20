@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Menu — Nana’s Akara</title>
+    <meta
+      name="description"
+      content="Browse the full Nana’s Akara menu. Filter by category, search meals, sort prices, and add your favourites to cart."
+    />
+    <meta name="theme-color" content="#0F766E" />
+
+    <meta property="og:title" content="Menu — Nana’s Akara" />
+    <meta
+      property="og:description"
+      content="Explore akara specials, breakfast combos, sides, drinks, and family packs. Add to cart and checkout securely."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://nanasakara.ng/menu.html" />
+    <meta
+      property="og:image"
+      content="https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=Premium%20food%20photography%2C%20Nigerian%20akara%20specials%20menu%20spread%20on%20minimal%20table%2C%20teal%20accents%2C%20editorial%20light%2C%20ultra%20realistic&image_size=landscape_16_9"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Poppins:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="page" data-menu-page>
+      <header class="site-header" role="banner">
+        <div class="container header-inner">
+          <a class="brand" href="index.html" aria-label="Nana's Akara home">
+            <span class="brand-mark">Nana’s Akara</span>
+            <span class="brand-sub">Online Kitchen</span>
+          </a>
+
+          <nav class="nav" aria-label="Primary navigation">
+            <a href="index.html" data-nav-link>Home</a>
+            <a href="menu.html" data-nav-link>Menu</a>
+            <a href="careers.html" data-nav-link>Careers</a>
+            <a href="contact.html" data-nav-link>Contact</a>
+            <a href="cart.html" data-nav-link>Cart</a>
+          </nav>
+
+          <div class="header-actions">
+            <a class="cart-link" href="cart.html" aria-label="Open cart">
+              <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
+              <span class="cart-count" data-cart-count hidden>0</span>
+            </a>
+            <a class="btn btn-primary btn-sm" href="menu.html">Order Now</a>
+            <button
+              class="icon-btn nav-toggle"
+              type="button"
+              aria-label="Open menu"
+              aria-expanded="false"
+              data-nav-toggle
+            >
+              <span class="nav-toggle-lines" aria-hidden="true"></span>
+            </button>
+          </div>
+        </div>
+
+        <div class="mobile-nav" data-mobile-nav hidden>
+          <div class="container">
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="careers.html">Careers</a>
+            <a href="contact.html">Contact</a>
+            <a href="cart.html">Cart</a>
+          </div>
+        </div>
+      </header>
+
+      <main id="main" role="main">
+        <section class="section tight">
+          <div class="container">
+            <div class="eyebrow">
+              <i class="fa-solid fa-utensils" aria-hidden="true"></i>
+              Full catalog
+            </div>
+            <h1 style="margin-top:14px; font-size:clamp(34px,4vw,48px);">Menu</h1>
+            <p class="lead" style="margin-top:10px;">
+              Filter, search, and sort—then add meals to cart in seconds.
+            </p>
+          </div>
+        </section>
+
+        <section class="section surface">
+          <div class="container">
+            <div class="toolbar">
+              <div class="field">
+                <label class="label" for="menuSearch">Search</label>
+                <input
+                  class="input"
+                  id="menuSearch"
+                  type="search"
+                  placeholder="Search akara, pap, moi moi…"
+                  autocomplete="off"
+                  data-menu-search
+                />
+              </div>
+              <div class="field">
+                <label class="label" for="menuSort">Sort</label>
+                <select class="select" id="menuSort" data-menu-sort>
+                  <option value="featured">Featured</option>
+                  <option value="price-asc">Price: Low → High</option>
+                  <option value="price-desc">Price: High → Low</option>
+                  <option value="name-asc">Name: A → Z</option>
+                </select>
+              </div>
+            </div>
+            <div class="chip-row" style="margin-top:14px;" data-category-chips></div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="container">
+            <div class="grid cols-3" data-menu-grid aria-label="Menu items grid"></div>
+            <div class="notice" style="margin-top:14px;" data-menu-empty hidden>
+              No meals match your search. Try a different keyword or category.
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer" role="contentinfo">
+        <div class="container">
+          <div class="footer-grid">
+            <div>
+              <div class="brand-mark">Nana’s Akara</div>
+              <div class="muted" style="margin-top:10px;">
+                Premium Nigerian flavours, prepared fresh and delivered to your doorstep.
+              </div>
+            </div>
+            <div>
+              <div class="footer-title">Quick Links</div>
+              <div class="footer-links">
+                <a href="menu.html">Menu</a>
+                <a href="cart.html">Cart</a>
+                <a href="careers.html">Careers</a>
+                <a href="contact.html">Contact</a>
+              </div>
+            </div>
+            <div>
+              <div class="footer-title">Customer Support</div>
+              <div class="footer-links">
+                <a href="contact.html">Help & Support</a>
+                <a href="contact.html#faq">FAQs</a>
+                <a href="checkout.html">Payments</a>
+              </div>
+            </div>
+            <div>
+              <div class="footer-title">Newsletter</div>
+              <div class="muted" style="margin-bottom:10px;">
+                Get offers and updates.
+              </div>
+              <form data-newsletter-form aria-label="Footer newsletter signup">
+                <div class="field">
+                  <label class="sr-only" for="footerNewsletterEmail">Email</label>
+                  <input
+                    class="input"
+                    id="footerNewsletterEmail"
+                    type="email"
+                    name="email"
+                    placeholder="you@example.com"
+                    autocomplete="email"
+                    required
+                  />
+                </div>
+                <button class="btn btn-primary btn-sm" type="submit" style="margin-top:10px;">
+                  Subscribe
+                </button>
+              </form>
+              <div style="margin-top:14px; display:flex; gap:12px; align-items:center;">
+                <a class="icon-btn" href="#" aria-label="Instagram">
+                  <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                </a>
+                <a class="icon-btn" href="#" aria-label="X">
+                  <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+                </a>
+                <a class="icon-btn" href="#" aria-label="Facebook">
+                  <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <div>© <span data-year></span> Nana’s Akara. All rights reserved.</div>
+            <div>Built for fast, secure online ordering.</div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <a class="whatsapp" data-whatsapp aria-label="WhatsApp support" href="#">
+      <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+    </a>
+
+    <div class="chat-widget" aria-label="Live chat widget">
+      <button
+        class="chat-toggle"
+        type="button"
+        aria-label="Open live chat"
+        aria-expanded="false"
+        data-chat-toggle
+      >
+        <i class="fa-solid fa-message" aria-hidden="true"></i>
+      </button>
+      <div class="chat-panel" data-chat-panel role="dialog" aria-label="Live chat">
+        <div class="chat-head">
+          <div>
+            <div class="chat-title">Live Chat</div>
+            <div class="muted" style="font-size:12px;">Placeholder widget</div>
+          </div>
+          <button class="icon-btn" type="button" aria-label="Close chat" data-chat-close>
+            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+          </button>
+        </div>
+        <div class="chat-body" data-chat-body>
+          <div class="chat-bubble">
+            Hi! This is a placeholder live chat. For urgent help, use WhatsApp.
+          </div>
+        </div>
+        <form class="chat-foot" data-chat-form>
+          <label class="sr-only" for="chatInput">Message</label>
+          <input
+            class="input"
+            id="chatInput"
+            data-chat-input
+            type="text"
+            placeholder="Type a message…"
+            autocomplete="off"
+          />
+          <button class="btn btn-primary btn-sm" type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="toast" role="status" aria-live="polite" data-toast></div>
+    <script src="js/runtime-config.js"></script>
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>

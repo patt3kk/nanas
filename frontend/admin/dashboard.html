@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Admin Dashboard — Nana’s Akara</title>
+    <meta name="theme-color" content="#0F766E" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Poppins:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="../css/variables.css" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+    <link rel="stylesheet" href="css/admin.css" />
+  </head>
+  <body>
+    <div class="admin-shell" data-admin-shell>
+      <aside class="admin-sidebar">
+        <a class="admin-brand" href="dashboard.html" aria-label="Admin dashboard">
+          <span class="brand-mark">Nana’s Akara</span>
+          <span class="muted" style="font-size:13px;">Admin Dashboard</span>
+        </a>
+
+        <div class="admin-user">
+          <div style="font-weight:900; letter-spacing:-.02em;" data-admin-user-name>—</div>
+          <div class="muted" style="font-size:13px; margin-top:4px;" data-admin-user-email>—</div>
+          <div style="margin-top:10px; display:flex; gap:8px; flex-wrap:wrap;">
+            <span class="badge" data-admin-user-role>—</span>
+            <button type="button" class="btn btn-secondary btn-sm" data-admin-logout>Logout</button>
+          </div>
+        </div>
+
+        <nav class="admin-nav" aria-label="Admin navigation">
+          <button type="button" data-admin-nav="overview" aria-current="page">
+            <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
+            Overview
+          </button>
+          <button type="button" data-admin-nav="menu">
+            <i class="fa-solid fa-utensils" aria-hidden="true"></i>
+            Menu
+          </button>
+          <button type="button" data-admin-nav="orders">
+            <i class="fa-solid fa-receipt" aria-hidden="true"></i>
+            Orders
+          </button>
+          <button type="button" data-admin-nav="customers">
+            <i class="fa-solid fa-users" aria-hidden="true"></i>
+            Customers
+          </button>
+          <button type="button" data-admin-nav="contacts">
+            <i class="fa-solid fa-inbox" aria-hidden="true"></i>
+            Contact Messages
+          </button>
+          <button type="button" data-admin-nav="careers">
+            <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
+            Career Applications
+          </button>
+          <button type="button" data-admin-nav="admins" data-admin-super-only hidden>
+            <i class="fa-solid fa-user-shield" aria-hidden="true"></i>
+            Admins
+          </button>
+          <button type="button" data-admin-nav="settings">
+            <i class="fa-solid fa-gear" aria-hidden="true"></i>
+            Settings
+          </button>
+        </nav>
+      </aside>
+
+      <main class="admin-main">
+        <div class="admin-topbar">
+          <div>
+            <div class="eyebrow">Admin</div>
+            <h1 style="margin-top:8px; font-size:32px;" data-admin-title>Dashboard Overview</h1>
+          </div>
+          <a class="btn btn-secondary btn-sm" href="../index.html">View Website</a>
+        </div>
+
+        <div class="admin-sections">
+          <section class="admin-section" data-admin-section="overview">
+            <div class="admin-grid-4" data-admin-metrics></div>
+            <div class="card" style="margin-top:14px;">
+              <div class="card-body">
+                <div class="footer-title" style="margin:0;">Recent Orders</div>
+                <div style="margin-top:12px;" data-admin-recent-orders></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="admin-section" data-admin-section="menu" hidden>
+            <div class="card">
+              <div class="card-body" style="display:grid; gap:12px;">
+                <div class="footer-title" style="margin:0;">Menu Management</div>
+                <form data-admin-menu-form style="display:grid; gap:10px;">
+                  <input type="hidden" name="id" />
+                  <div class="form-row two">
+                    <div class="field">
+                      <label class="label">Name</label>
+                      <input class="input" name="name" required />
+                    </div>
+                    <div class="field">
+                      <label class="label">Category</label>
+                      <select class="input" name="category" required data-admin-categories></select>
+                    </div>
+                  </div>
+                  <div class="form-row two">
+                    <div class="field">
+                      <label class="label">Price (₦)</label>
+                      <input class="input" name="price" inputmode="numeric" required />
+                    </div>
+                    <div class="field">
+                      <label class="label">Discounted Price (₦)</label>
+                      <input class="input" name="discountedPrice" inputmode="numeric" />
+                    </div>
+                  </div>
+                  <div class="field">
+                    <label class="label">Description</label>
+                    <textarea class="textarea" name="description" rows="3"></textarea>
+                  </div>
+                  <div class="form-row two">
+                    <div class="field">
+                      <label class="label">Featured</label>
+                      <select class="input" name="isFeatured">
+                        <option value="false">No</option>
+                        <option value="true">Yes</option>
+                      </select>
+                    </div>
+                    <div class="field">
+                      <label class="label">Available</label>
+                      <select class="input" name="isAvailable">
+                        <option value="true">Available</option>
+                        <option value="false">Unavailable</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                    <button class="btn btn-primary btn-sm" type="submit" data-admin-menu-save>Save Item</button>
+                    <button class="btn btn-secondary btn-sm" type="button" data-admin-menu-reset>Reset</button>
+                  </div>
+                  <div class="muted" style="font-size:13px;" data-admin-menu-msg></div>
+                </form>
+              </div>
+            </div>
+
+            <div class="card" style="margin-top:14px;">
+              <div class="card-body">
+                <div style="display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;">
+                  <div class="footer-title" style="margin:0;">Menu Items</div>
+                  <input class="input" placeholder="Search…" data-admin-menu-search style="max-width:320px;" />
+                </div>
+                <div style="margin-top:12px;" data-admin-menu-table></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="admin-section" data-admin-section="orders" hidden>
+            <div class="card">
+              <div class="card-body">
+                <div style="display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;">
+                  <div class="footer-title" style="margin:0;">Orders</div>
+                  <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                    <input class="input" placeholder="Search…" data-admin-orders-search style="max-width:240px;" />
+                    <select class="input" data-admin-orders-status>
+                      <option value="">All Statuses</option>
+                      <option>Pending</option>
+                      <option>Confirmed</option>
+                      <option>Preparing</option>
+                      <option>Ready</option>
+                      <option>Completed</option>
+                      <option>Cancelled</option>
+                    </select>
+                  </div>
+                </div>
+                <div style="margin-top:12px;" data-admin-orders-table></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="admin-section" data-admin-section="customers" hidden>
+            <div class="card">
+              <div class="card-body">
+                <div style="display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;">
+                  <div class="footer-title" style="margin:0;">Customers</div>
+                  <input class="input" placeholder="Search…" data-admin-customers-search style="max-width:280px;" />
+                </div>
+                <div style="margin-top:12px;" data-admin-customers-table></div>
+                <div style="margin-top:14px;" data-admin-customer-orders></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="admin-section" data-admin-section="contacts" hidden>
+            <div class="card">
+              <div class="card-body">
+                <div style="display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;">
+                  <div class="footer-title" style="margin:0;">Contact Messages</div>
+                  <input class="input" placeholder="Search…" data-admin-contacts-search style="max-width:280px;" />
+                </div>
+                <div style="margin-top:12px;" data-admin-contacts-table></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="admin-section" data-admin-section="careers" hidden>
+            <div class="card">
+              <div class="card-body">
+                <div style="display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;">
+                  <div class="footer-title" style="margin:0;">Career Applications</div>
+                  <input class="input" placeholder="Search…" data-admin-careers-search style="max-width:280px;" />
+                </div>
+                <div style="margin-top:12px;" data-admin-careers-table></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="admin-section" data-admin-section="admins" hidden>
+            <div class="card">
+              <div class="card-body" style="display:grid; gap:12px;">
+                <div class="footer-title" style="margin:0;">Admin Management</div>
+                <form data-admin-users-form style="display:grid; gap:10px;">
+                  <input type="hidden" name="id" />
+                  <div class="form-row two">
+                    <div class="field">
+                      <label class="label">Name</label>
+                      <input class="input" name="name" required />
+                    </div>
+                    <div class="field">
+                      <label class="label">Email</label>
+                      <input class="input" name="email" type="email" required />
+                    </div>
+                  </div>
+                  <div class="form-row two">
+                    <div class="field">
+                      <label class="label">Role</label>
+                      <select class="input" name="role">
+                        <option value="admin">Admin</option>
+                        <option value="super-admin">Super Admin</option>
+                      </select>
+                    </div>
+                    <div class="field">
+                      <label class="label">Active</label>
+                      <select class="input" name="isActive">
+                        <option value="true">Active</option>
+                        <option value="false">Disabled</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="field">
+                    <label class="label">Password (set or reset)</label>
+                    <input class="input" name="password" type="password" autocomplete="new-password" />
+                  </div>
+                  <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                    <button class="btn btn-primary btn-sm" type="submit">Save Admin</button>
+                    <button class="btn btn-secondary btn-sm" type="button" data-admin-users-reset>Reset</button>
+                  </div>
+                  <div class="muted" style="font-size:13px;" data-admin-users-msg></div>
+                </form>
+              </div>
+            </div>
+
+            <div class="card" style="margin-top:14px;">
+              <div class="card-body">
+                <div style="display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;">
+                  <div class="footer-title" style="margin:0;">Admins</div>
+                  <input class="input" placeholder="Search…" data-admin-users-search style="max-width:280px;" />
+                </div>
+                <div style="margin-top:12px;" data-admin-users-table></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="admin-section" data-admin-section="settings" hidden>
+            <div class="card">
+              <div class="card-body" style="display:grid; gap:12px;">
+                <div class="footer-title" style="margin:0;">System Settings</div>
+                <form data-admin-settings-form style="display:grid; gap:10px;">
+                  <div class="form-row two">
+                    <div class="field">
+                      <label class="label">Company Name</label>
+                      <input class="input" name="company.name" />
+                    </div>
+                    <div class="field">
+                      <label class="label">Tagline</label>
+                      <input class="input" name="company.tagline" />
+                    </div>
+                  </div>
+                  <div class="form-row two">
+                    <div class="field">
+                      <label class="label">Contact Email</label>
+                      <input class="input" name="contact.email" />
+                    </div>
+                    <div class="field">
+                      <label class="label">Phone</label>
+                      <input class="input" name="contact.phone" />
+                    </div>
+                  </div>
+                  <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                    <button class="btn btn-primary btn-sm" type="submit">Save Settings</button>
+                  </div>
+                  <div class="muted" style="font-size:13px;" data-admin-settings-msg></div>
+                </form>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div class="toast" data-toast role="status" aria-live="polite"></div>
+      </main>
+    </div>
+
+    <script src="../js/runtime-config.js"></script>
+    <script type="module" src="js/dashboard.js"></script>
+  </body>
+</html>
+
