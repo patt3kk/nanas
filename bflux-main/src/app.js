@@ -1,6 +1,7 @@
 const express = require("express");
 const morgan = require("morgan");
 const cookieParser = require("cookie-parser");
+const cors = require("cors");
 const { env } = require("./config");
 const { morganStream } = require("./config/logger");
 const { buildSecurityMiddleware } = require("./middlewares/security.middleware");
@@ -10,6 +11,23 @@ const { mountRoutes } = require("./routes");
 const app = express();
 
 app.disable("x-powered-by");
+
+// app.use(
+//   cors({
+//     origin: process.env.FRONTEND_URL,
+//     credentials: true,
+//   })
+// );
+
+app.use(
+  cors({
+    origin: [
+      "http://localhost:5500",
+      "http://127.0.0.1:5500"
+    ],
+    credentials: true,
+  })
+);
 
 if (env.TRUST_PROXY !== undefined) {
   app.set("trust proxy", env.TRUST_PROXY);
