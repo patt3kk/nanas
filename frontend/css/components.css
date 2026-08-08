@@ -41,6 +41,10 @@
   color:var(--muted);
 }
 
+.logo-mobile {
+  display:none;
+}
+
 .nav{
   display:flex;
   align-items:center;

@@ -298,9 +298,9 @@ export const OPEN_POSITIONS = [
 
 export const BRAND = {
   name: "Nana's Akara",
-  phone: "+2340000000000",
+  phone: "+2348066721971",
   email: "support@nanasakara.ng",
-  addressLine: "Online-only kitchen, Lagos, Nigeria",
+  addressLine: "Online-only kitchen, Port Harcourt, Rivers State",
   whatsappMessage: "Hi Nana's Akara — I need help with my order.",
 };
 
