@@ -25,6 +25,7 @@ app.use(
       "http://localhost:5500",
       "http://127.0.0.1:5500",
       "https://nanasakara-test.vercel.app",
+      "https://nanasupportpage.netlify.app/",
       "https://nanasakara.ng"
     ],
     credentials: true,
