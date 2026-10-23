@@ -143,7 +143,7 @@
                   <div>
                     <div class="footer-title" style="margin:0;">Delivery Information</div>
                     <div class="muted" style="margin-top:6px; font-size:13px;">
-                      We deliver within Lagos and nearby areas.
+                      We deliver within RSU, Mile III and nearby areas.
                     </div>
                   </div>
 
@@ -179,9 +179,9 @@
                     Pay Securely with Paystack
                   </button>
 
-                  <div class="muted" style="font-size:13px;">
+                  <!-- <div class="muted" style="font-size:13px;">
                     This button prepares your order payload and calls a backend-ready Paystack initialization function.
-                  </div>
+                  </div> -->
                 </div>
               </form>
             </div>
@@ -195,7 +195,9 @@
         <div class="container">
           <div class="footer-grid">
             <div>
-              <div class="brand-mark">Nana’s Akara</div>
+              <div class="brand-mark">
+                <img src="./assets/icons/logo.png">
+              </div>
               <div class="muted" style="margin-top:10px;">
                 Premium Nigerian flavours, prepared fresh and delivered to your doorstep.
               </div>
@@ -230,7 +232,7 @@
                     id="footerNewsletterEmail"
                     type="email"
                     name="email"
-                    placeholder="you@example.com"
+                    placeholder="write your email here"
                     autocomplete="email"
                     required
                   />
@@ -254,7 +256,7 @@
           </div>
           <div class="footer-bottom">
             <div>© <span data-year></span> Nana’s Akara. All rights reserved.</div>
-            <div>Built for fast, secure online ordering.</div>
+            <div>Built with love from Nana's for fast, secure online ordering.</div>
           </div>
         </div>
       </footer>
@@ -264,45 +266,19 @@
       <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
     </a>
 
-    <div class="chat-widget" aria-label="Live chat widget">
-      <button
-        class="chat-toggle"
-        type="button"
-        aria-label="Open live chat"
-        aria-expanded="false"
-        data-chat-toggle
-      >
-        <i class="fa-solid fa-message" aria-hidden="true"></i>
-      </button>
-      <div class="chat-panel" data-chat-panel role="dialog" aria-label="Live chat">
-        <div class="chat-head">
-          <div>
-            <div class="chat-title">Live Chat</div>
-            <div class="muted" style="font-size:12px;">Placeholder widget</div>
-          </div>
-          <button class="icon-btn" type="button" aria-label="Close chat" data-chat-close>
-            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
-          </button>
-        </div>
-        <div class="chat-body" data-chat-body>
-          <div class="chat-bubble">
-            Hi! This is a placeholder live chat. For urgent help, use WhatsApp.
-          </div>
-        </div>
-        <form class="chat-foot" data-chat-form>
-          <label class="sr-only" for="chatInput">Message</label>
-          <input
-            class="input"
-            id="chatInput"
-            data-chat-input
-            type="text"
-            placeholder="Type a message…"
-            autocomplete="off"
-          />
-          <button class="btn btn-primary btn-sm" type="submit">Send</button>
-        </form>
-      </div>
-    </div>
+    <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/6adb83f6a7f600347c5edd01/1k5knn031';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
 
     <div class="toast" role="status" aria-live="polite" data-toast></div>
     <script src="js/runtime-config.js"></script>

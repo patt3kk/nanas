@@ -213,46 +213,46 @@ export const MENU_ITEMS = [
 
 export const TESTIMONIALS = [
   {
-    name: "Amaka",
-    area: "Ikeja",
+    name: "Martins",
+    area: "Our Lady Seat of Wisdom Catholic Chaplaincy",
     rating: 5,
+    quote:
+      "The Spaghetti was tasty, well-cooked, and had that homemade feel that makes a meal so satisfying. The portion was good too, and everything just came together nicely. Definitely one of those meals I'd happily order again. 100%",
+  },
+  {
+    name: "Bifugha Success",
+    area: "UST Backgate",
+    rating: 5,
+    quote:
+      "OMG, the Spaghetti and Chicken was a 10/10. Love it. My friends and I love it. We will definitely be trying something else off the menu some time soon.",
+  },
+  {
+    name: "Amaka Moses",
+    area: "Mile III",
+    rating: 4,
     quote:
       "The akara arrived hot and crispy. Packaging was premium and delivery was fast.",
   },
   {
-    name: "Tunde",
-    area: "Lekki",
+    name: "Chi Chi",
+    area: "Ikwerre Road",
     rating: 5,
     quote:
-      "Akara Burger is elite. You can tell the ingredients are fresh—worth every naira.",
+      "OMG, your meals are sooo gooooood!",
   },
   {
-    name: "Zainab",
-    area: "Surulere",
-    rating: 4,
-    quote:
-      "Loved the pap texture and the spice level. Smooth ordering experience on mobile.",
-  },
-  {
-    name: "Chinedu",
-    area: "Yaba",
-    rating: 5,
-    quote:
-      "Family pack saved our morning. Everything tasted like home, just more polished.",
-  },
-  {
-    name: "Kemi",
-    area: "Gbagada",
+    name: "Chika",
+    area: "Access Bank, Ikwerre Road",
     rating: 5,
     quote:
       "Secure payment and quick checkout. This is the standard I want for food ordering.",
   },
   {
-    name: "Seyi",
-    area: "Victoria Island",
-    rating: 4,
+    name: "Yvonne",
+    area: "Mile II",
+    rating: 5,
     quote:
-      "Clean website, great photos, and the food delivered exactly as promised.",
+      "Thank You, I really enjoyed my breakfast, no stress. The akara is crunchy.",
   },
 ];
 
@@ -278,20 +278,20 @@ export const FAQS = [
 export const OPEN_POSITIONS = [
   {
     id: "dispatch-rider",
-    title: "Dispatch Rider (Contract)",
-    location: "Lagos",
+    title: "Dispatch Rider",
+    location: "Diobu",
     type: "On-site",
   },
   {
     id: "kitchen-assistant",
     title: "Kitchen Assistant",
-    location: "Lagos",
+    location: "Diobu",
     type: "On-site",
   },
   {
     id: "customer-support",
-    title: "Customer Support Associate",
-    location: "Lagos",
+    title: "Customer Support",
+    location: "Diobu",
     type: "Hybrid",
   },
 ];
@@ -301,6 +301,6 @@ export const BRAND = {
   phone: "+2348066721971",
   email: "support@nanasakara.ng",
   addressLine: "Online-only kitchen, Port Harcourt, Rivers State",
-  whatsappMessage: "Hi Nana's Akara — I need help with my order.",
+  whatsappMessage: "Hi Nana's Akara - I need help with my order.",
 };
 
